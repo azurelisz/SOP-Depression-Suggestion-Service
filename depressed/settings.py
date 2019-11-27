@@ -26,6 +26,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,6 +40,8 @@ INSTALLED_APPS = [
     'suggest',  # added
     'rest_framework',  # added
     'py_eureka_client', # added
+    'corsheaders', #added
+
 ]
 
 MIDDLEWARE = [
@@ -49,6 +53,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware', #added
+    'corsheaders.middleware.CorsMiddleware', #added
+    'django.middleware.common.CommonMiddleware', #added
 ]
 
 ROOT_URLCONF = 'depressed.urls'
