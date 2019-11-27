@@ -39,22 +39,22 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'suggest',  # added
     'rest_framework',  # added
-    'py_eureka_client', # added
-    'corsheaders', #added
+    'py_eureka_client',  # added
+    'corsheaders',  # added
 
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # added
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.locale.LocaleMiddleware', #added
-    'corsheaders.middleware.CorsMiddleware', #added
-    'django.middleware.common.CommonMiddleware', #added
+    'django.middleware.locale.LocaleMiddleware',  # added
+    'django.middleware.common.CommonMiddleware',  # added
 ]
 
 ROOT_URLCONF = 'depressed.urls'
